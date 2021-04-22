@@ -1,0 +1,37 @@
+{
+  "name": "looker-embed-app-template",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "webpack && node ./bin/start.js",
+    "devstart": "webpack && nodemon ./bin/start.js",
+    "build": "webpack",
+    "watch": "webpack && webpack --watch"
+  },
+  "dependencies": {
+    "@google-cloud/connect-firestore": "^1.0.6",
+    "@google-cloud/firestore": "^4.1.1",
+    "@looker/embed-sdk": "^1.1.0",
+    "@looker/sdk": "^0.2.0-beta.32",
+    "axios": "^0.19.2",
+    "config": "^3.3.6",
+    "cookie-parser": "^1.4.5",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-favicon": "^2.0.1",
+    "express-session": "^1.17.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/register": "^7.10.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-middleware": "^3.7.2"
+  }
+}

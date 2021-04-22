@@ -1,0 +1,8 @@
+node_modules/
+.env
+looker.ini
+public/javascripts/*.bundle.js
+startup_scripts
+firebase-key.json
+.DS_Store
+config/client.json

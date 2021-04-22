@@ -1,0 +1,36 @@
+{
+    "dashboardId": "1",
+    "lookId": "1",
+    "dashboardTheme": "Looker",
+    "locale": "en",
+    "exploreModel": "model1",
+    "exploreName": "explore1",
+    "users": {
+      "viewer": {
+        "displayName": "Viewer",
+        "models": ["model1","model2"],
+        "permissions": [
+          "access_data",
+          "see_looks",
+          "see_user_dashboards",
+          "download_with_limit"
+        ],
+        "userAttributes": {}
+      },
+      "explorer": {
+        "displayName": "Premium User",
+        "models": ["model1","model2"],
+        "permissions": [
+          "access_data",
+          "see_looks",
+          "see_user_dashboards",
+          "explore",
+          "create_table_calculations",
+          "save_content",
+          "embed_browse_spaces",
+          "download_with_limit"
+        ],
+        "userAttributes": {}
+      }
+    }
+  }

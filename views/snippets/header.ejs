@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="topnav">
+      <div class="container" style="width: 30%;">
+        <div class="topnav-box" style="padding-left:0;"><img class="logo" src="/images/logo.png" /></div>
+        <div class="topnav-box"><a href="#">Products</a></div>
+        <div class="topnav-box"><a href="#">Explore</a></div>
+        <div class="topnav-box"><a href="#">Help</a></div>
+      </div>
+      <div style="width: 40%; text-align: center;"></div>
+      <div class="container" style="width: 30%; justify-content: flex-end;">
+        <%if(typeof session === 'object' && session.userId && session.userName){%>
+        <div class="topnav-box">
+          <%=session.userName%>
+        </div>
+        <div class="topnav-box">
+          <a href="/logout"><button class="template-button-1" type="submit">Logout</button></a>
+        </div>
+        <%} else {%>
+        <div class="topnav-box">
+          <a href="/login"><button class="template-button-1">Sign in</button></a>
+        </div>
+        <%}%>
+      </div>
+    </div>

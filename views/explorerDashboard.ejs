@@ -1,0 +1,20 @@
+<%- include('snippets/header') -%>
+<%- include('snippets/sidebar') -%>
+<div class="main-content">
+  <%- include('snippets/spinner') -%>
+  <div class="dropdown-menu-container">
+    <a href="/content"><button class="template-button-1">Back to your content</button></a>
+  </div>
+  <div class="iframe-container" id="iframe-container">
+
+  </div>
+</div>
+<script>
+const session = {
+  dashboardId: <%=dashboardId%>,
+  host: `<%= process.env.LOOKER_INSTANCE%>`,
+  theme: 'theme'
+}
+</script>
+<script src="/javascripts/lookerDashboardEmbed.bundle.js"></script>
+<%- include('snippets/footer') -%>

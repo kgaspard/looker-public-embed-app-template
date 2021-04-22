@@ -1,0 +1,16 @@
+<%- include('snippets/header') -%>
+<%- include('snippets/sidebar') -%>
+<div class="main-content">
+  <%- include('snippets/spinner') -%>
+  <div class="data-container" id="data-container">
+  </div>
+</div>
+<script>
+const appSession = {
+  host: `<%= process.env.LOOKER_INSTANCE%>`,
+  corsProxyPort: `<%= process.env.CORS_PROXY_PORT%>`,
+  lookId: `<%= config.get('lookId') %>`
+}
+</script>
+<script src="/javascripts/lookerApiCallEmbedSimple.bundle.js"></script>
+<%- include('snippets/footer') -%>

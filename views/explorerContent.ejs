@@ -1,0 +1,35 @@
+<%- include('snippets/header') -%>
+<%- include('snippets/sidebar') -%>
+<div class="main-content">
+  <%- include('snippets/spinner') -%>
+  <div class="dropdown-menu-container">
+    <a href="#"><button class="template-button-1" id="create-report-modal-open">Create new report</button></a>
+  </div>
+  <h3>Template Reports</h3>
+  <div class="templateDashboards-section">
+  </div>
+  <h3>Your Reports</h3>
+  <div class="dashboards-section">
+  </div>
+  <% if (session.embed_group_space_id) {%>
+  <h3>Your Organisation's Reports</h3>
+  <div class="sharedDashboards-section">
+  </div>
+  <%}%>
+  <h3>Your Looks</h3>
+  <div class="looks-section">
+  </div>
+  <%- include('snippets/createReportModal') -%>
+</div>
+<script>
+const appSession = {
+  host: `<%= process.env.LOOKER_INSTANCE%>`,
+  corsProxyPort: `<%= process.env.CORS_PROXY_PORT%>`,
+  personal_space_id: <%=session.personal_space_id%>,
+  <% if(session.embed_group_space_id){%>embed_group_space_id: <%=session.embed_group_space_id%>,<%}%>
+  looker_user_id: <%=session.looker_user_id%>,
+  template_space_id: <%=session.personaSpace%>
+}
+</script>
+<script src="javascripts/lookerContentManagementEmbed.bundle.js"></script>
+<%- include('snippets/footer') -%>
