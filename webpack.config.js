@@ -6,8 +6,8 @@ module.exports = {
     lookerDashboardEmbed: './middlewares/lookerDashboardEmbed.js',
     lookerExploreEmbed: './middlewares/lookerExploreEmbed.js',
     lookerLookEmbed: './middlewares/lookerLookEmbed.js',
+    lookerApiCallEmbedHelper: './middlewares/lookerApiCallEmbedHelper.js',
     lookerApiCallEmbed: './middlewares/lookerApiCallEmbed.js',
-    lookerApiCallEmbedSimple: './middlewares/lookerApiCallEmbedSimple.js',
   },
   node: {
     fs: 'empty',
@@ -20,4 +20,23 @@ module.exports = {
     publicPath: '/',
   },
   devtool: 'inline-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.(mjs|js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            // '@babel/preset-env',
+            {
+              plugins: [
+                '@babel/plugin-proposal-class-properties'
+              ]
+            }
+          ]
+        },
+      }
+    ],
+  }
 };

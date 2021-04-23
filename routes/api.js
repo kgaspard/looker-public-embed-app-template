@@ -5,9 +5,8 @@ var router = express.Router();
 
 router.get('/sdkToken', (req,res,next) => {
   Looker.generateUserToken(req.session.userId)
-  // .then(token => {console.log(token);return token;})
   .then(token => res.json(token))
-  .catch(err => res.status(401).send(err))
+  .catch(err => res.status(401).send(err.message))
 })
 
 router.get('/look', async (req,res,next) => {

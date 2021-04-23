@@ -7,10 +7,9 @@
 </div>
 <script>
 const appSession = {
-  host: `<%= process.env.LOOKER_INSTANCE%>`,
-  corsProxyPort: `<%= process.env.CORS_PROXY_PORT%>`,
+  apiHost: `<%= process.env.LOOKERSDK_BASE_URL%>`,
   lookId: `<%= config.get('lookId') %>`
 }
 </script>
-<script src="/javascripts/lookerApiCallEmbedSimple.bundle.js"></script>
+<script src="/javascripts/lookerApiCallEmbed.bundle.js"></script>
 <%- include('snippets/footer') -%>
