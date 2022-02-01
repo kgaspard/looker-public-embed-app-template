@@ -1,22 +1,13 @@
 <%- include('snippets/header') -%>
-<%- include('snippets/sidebar') -%>
 <div class="main-content">
-  <%- include('snippets/spinner') -%>
-  <div class="dropdown-menu-container">
-    <select name="daterange" class="input-select">
-      <option value="7 days">Last 7 days</option>
-      <option value="14 days">Last 14 days</option>
-    </select>
-  </div> 
   <div class="iframe-container" id="iframe-container">
-
   </div>
 </div>
 <script>
 const session = {
   dashboardId: <%= dashboardId %>,
   host: `<%= process.env.LOOKER_INSTANCE%>`,
-  theme: `<%= config.get('dashboardTheme') %>`
+  theme: `<%= config.get('defaultTheme') %>`
 }
 </script>
 <script src="/javascripts/lookerDashboardEmbed.bundle.js"></script>

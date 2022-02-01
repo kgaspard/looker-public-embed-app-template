@@ -1,36 +1,22 @@
 {
-    "dashboardId": "1",
-    "lookId": "1",
-    "dashboardTheme": "Looker",
-    "locale": "en",
-    "exploreModel": "model1",
-    "exploreName": "explore1",
-    "users": {
-      "viewer": {
-        "displayName": "Viewer",
+    "organisationName": "MyOrg",
+    "defaultDashboardId": "1",  
+    "defaultTheme": "Looker",
+    "user": {
+        "externalId": "public_embed_user",
+        "name": "Public Embed User",
         "models": ["model1","model2"],
         "permissions": [
           "access_data",
           "see_looks",
           "see_user_dashboards",
-          "download_with_limit"
-        ],
-        "userAttributes": {}
-      },
-      "explorer": {
-        "displayName": "Premium User",
-        "models": ["model1","model2"],
-        "permissions": [
-          "access_data",
-          "see_looks",
-          "see_user_dashboards",
+          "see_lookml_dashboards",
           "explore",
           "create_table_calculations",
-          "save_content",
           "embed_browse_spaces",
-          "download_with_limit"
+          "download_with_limit",
+          "create_alerts"
         ],
         "userAttributes": {}
-      }
     }
-  }
+}

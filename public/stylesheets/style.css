@@ -42,39 +42,10 @@ body {
   padding: 10px;
 }
 
-/* Side navigation bar */
-.sidebar {
-  width: 225px;
-  height: calc(100vh - 45px);
-  position: fixed;
-  top: 45px;
-  left: 0;
-  background-color: #4c4c4c;
-  color: #fff;
-}
-
-.sidebar-header {
-  padding: 30px 25px;
-}
-.sidebar-links {
-  padding: 30px 0;
-}
-.sidebar-links a {
-  text-decoration: none;
-  color: #fff;
-}
-.sidebar-link {
-  padding: 10px 25px;
-}
-.sidebar-link:hover, .sidebar-link.active {
-  background-color: #4c4c4c;
-  color: #4285F4;
-}
-
 /* Main body */
 .main-content {
   height: calc(100vh - 45px - 2*10px);
-  padding: 10px 10px 10px calc(225px + 10px);
+  padding: 10px;
   text-align: center;
 }
 

@@ -4,13 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const favicon = require('express-favicon');
-var session = require('express-session');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 require('dotenv').config();
 
 var indexRouter = require('./routes/index');
-var apiRouter = require('./routes/api');
 
 var app = express();
 const config = require('./webpack.config.js');
@@ -30,23 +28,9 @@ app.use(webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath,
 }));
 
-// Session Store
-
-app.use(
-  session({
-    secret: 'my-secret13220972',
-    resave: true,
-    saveUninitialized: true,
-    cookie: {
-      maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
-    }
-  })
-);
-
 // Routes
 
 app.use('/', indexRouter);
-app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

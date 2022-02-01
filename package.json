@@ -9,32 +9,29 @@
     "watch": "webpack && webpack --watch"
   },
   "dependencies": {
-    "@google-cloud/connect-firestore": "^1.0.6",
-    "@google-cloud/firestore": "^4.1.1",
-    "@looker/embed-sdk": "^1.1.0",
+    "@looker/embed-sdk": "^1.6.1",
     "@looker/sdk": "^0.2.0-beta.32",
-    "@looker/sdk-rtl": "^21.0.12",
-    "axios": "^0.19.2",
-    "config": "^3.3.6",
-    "cookie-parser": "^1.4.5",
+    "@looker/sdk-rtl": "^21.3.1",
+    "axios": "^0.25.0",
+    "config": "^3.3.7",
+    "cookie-parser": "^1.4.6",
     "debug": "~2.6.9",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "express-favicon": "^2.0.1",
-    "express-session": "^1.17.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.16",
-    "@babel/plugin-proposal-class-properties": "^7.13.0",
-    "@babel/plugin-transform-runtime": "^7.13.15",
-    "@babel/preset-env": "^7.13.15",
-    "@babel/register": "^7.10.5",
-    "babel-loader": "^8.2.2",
+    "@babel/core": "^7.16.12",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.16.10",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.16.9",
+    "babel-loader": "^8.2.3",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-middleware": "^3.7.2"
+    "webpack-dev-middleware": "^3.7.3"
   }
 }
