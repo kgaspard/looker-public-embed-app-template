@@ -1,6 +1,6 @@
-# Looker Embed App Template
+# Looker Public Embed App Template
 
-A simple template built using Nodejs and Express to demonstrate Looker embeddinng functionalilty (iframe, API, authentication)
+A simple template built using Nodejs and Express to public embed Looker dashboards. **NOTE THIS WILL MAKE DASHBOARDS ON YOUR INSTANCE PUBLIC**
 
 ## Installation and setup
 
