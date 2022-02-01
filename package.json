@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "webpack && node ./bin/start.js",
+    "start": "node ./bin/start.js",
     "devstart": "webpack && nodemon ./bin/start.js",
     "build": "webpack",
     "watch": "webpack && webpack --watch"
