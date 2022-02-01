@@ -1,6 +1,7 @@
 {
+    "maxAllowedDate": "2022-03-21",
+    "allowedDashboardIds": ["1","2","3"],
     "organisationName": "MyOrg",
-    "defaultDashboardId": "1",  
     "defaultTheme": "Looker",
     "user": {
         "externalId": "public_embed_user",

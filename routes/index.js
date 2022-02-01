@@ -8,11 +8,24 @@ router.get('/', function(req, res, next) {
   res.redirect('/dashboard');
 });
 
+const allowedDashboardIds = config.get('allowedDashboardIds')
+
 router.get('/dashboard', function(req, res, next) {
-  res.redirect(`/dashboard/${config.get('defaultDashboardId')}`);
+  res.redirect(`/dashboard/${allowedDashboardIds[0]}`);
 });
 
-router.get('/dashboard/:id', function(req, res, next) {
+const checkValidity = (req, res, next) => {
+  if( !(Date.now() < Date.parse(config.get('maxAllowedDate')) ) ){
+    return res.status(403).send()
+  }
+  else if(!allowedDashboardIds.includes(req.params.id)) {
+    return res.status(403).send()
+  } else {
+    next()
+  }
+}
+
+router.get('/dashboard/:id', checkValidity, function(req, res, next) {
   res.render('dashboard', { title: `${config.get('organisationName')} Dashboard`, config: config, dashboardId: req.params.id });
 });
 
